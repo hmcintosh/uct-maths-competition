@@ -929,6 +929,7 @@ def printer_school_report(request, school_list=None):
 
         responsible_teacher = ResponsibleTeacher.objects.filter(school = assigned_school)
         timestamp = str(datetime.datetime.now().strftime('%d %B %Y at %H:%M'))
+        comp_year = str(datetime.datetime.now().strftime('%Y'))
         gold_count = student_list.filter(award='G').count()
         merit_count = student_list.filter(award='M').count()
         merit_count = merit_count + student_list.filter(award='MOX').count()
@@ -948,6 +949,7 @@ def printer_school_report(request, school_list=None):
 
         if responsible_teacher:
             c = {'type':'Students',
+                 'comp_year': comp_year,
                 'timestamp':timestamp,
                 'schooln':assigned_school,
                 'responsible_teacher':responsible_teacher[0],
