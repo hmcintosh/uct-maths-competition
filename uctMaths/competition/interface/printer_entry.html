@@ -12,7 +12,7 @@
             
             <td>
                 <table border="0.1" width="165">
-                    <tr align="center">
+                    <tr align="left">
                         <th>Grade:</th>
                         <th><b>8</b></th>
                         <th><b>9</b></th>
@@ -20,22 +20,22 @@
                         <th><b>11</b></th>
                         <th><b>12</b></th>
                     </tr>
-                    <tr align="center">
+                    <tr align="left">
                         <th width="80">Individuals:</th>
                         {%for grd in grades%}
                         {%for key, s in student_list.items%}
                         {% if grd == key %}
-                        <td align="center">{{s|length}}</td>
+                        <td align="left">{{s|length}}</td>
                         {%endif%}
                         {%endfor%}
                         {%endfor%}
                     </tr>
-                    <tr align="center">
+                    <tr align="left">
                         <th width="80">Pairs:</th>
                         {%for grd in grades%}
                         {%for key, p in pair_list.items%}
                         {% if grd == key %}
-                        <td align="center">{{p}}</td>
+                        <td align="left">{{p}}</td>
                         {%endif%}
                         {%endfor%}
                         {%endfor%}
@@ -69,11 +69,11 @@
                 <th>Email </th>
             </tr>
             <tr>
-                <td align="center">{{responsible_teacher.firstname}}</td>
-                <td align="center">{{responsible_teacher.surname}}</td>
-                <td align="center">{{responsible_teacher.phone_primary}}</td>
-                <td align="center">{{responsible_teacher.phone_alt}}</td>
-                <td align="center">{{responsible_teacher.email}}</td>
+                <td align="left">{{responsible_teacher.firstname}}</td>
+                <td align="left">{{responsible_teacher.surname}}</td>
+                <td align="left">{{responsible_teacher.phone_primary}}</td>
+                <td align="left">{{responsible_teacher.phone_alt}}</td>
+                <td align="left">{{responsible_teacher.email}}</td>
             </tr>
         </table>
     </div>
@@ -95,11 +95,11 @@
             <!-- Populates the list with previously registered invigilators -->
             {%for invigilator in invigilator_list%}
                 <tr>
-                    <td align="center">{{invigilator.firstname}}</td>
-                    <td align="center">{{invigilator.surname}}</td>
-                    <td align="center">{{invigilator.phone_primary}}</td>                    
-                    <td align="center">{{invigilator.phone_alt}}</td>
-                    <td align="center">{{invigilator.email}}</td>
+                    <td align="left">{{invigilator.firstname}}</td>
+                    <td align="left">{{invigilator.surname}}</td>
+                    <td align="left">{{invigilator.phone_primary}}</td>
+                    <td align="left">{{invigilator.phone_alt}}</td>
+                    <td align="left">{{invigilator.email}}</td>
                 </tr>
             {%endfor%}
         </table>
@@ -124,8 +124,8 @@
                 {% if grade == key %} <!-- only for the current grade -->
                 {%for student in student_l%}
                 <tr>
-                <td align="center">{{student.firstname}}</td>
-                <td align="center">{{student.surname}}</td>
+                <td align="left">{{student.firstname}}</td>
+                <td align="left">{{student.surname}}</td>
                 </tr>
                 {%endfor%}
                 {%endif%}
@@ -156,8 +156,8 @@
                 {% if grade|add:3 == key %} <!-- only for the current grade -->
                 {%for student in student_l%}
                 <tr>
-                <td align="center">{{student.firstname}}</td>
-                <td align="center">{{student.surname}}</td>
+                <td align="left">{{student.firstname}}</td>
+                <td align="left">{{student.surname}}</td>
                 </tr>
                 {%endfor%}
                 {%endif%}
