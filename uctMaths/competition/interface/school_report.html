@@ -63,14 +63,14 @@
                         {% if grade == key %} <!-- only for the current grade -->
                             {%for student in student_l%}
                                 <tr>
-                                <td align="center">{{student.reference}}</td>
-                                <td align="center">{{student.firstname}}</td>
-                                <td align="center">{{student.surname}}</td>
-                                <td align="center">{{student.score}}</td>
-                                <td align="center">{%if student.award%}
+                                <td align="left">{{student.reference}}</td>
+                                <td align="left">{{student.firstname}}</td>
+                                <td align="left">{{student.surname}}</td>
+                                <td align="left">{{student.score}}</td>
+                                <td align="left">{%if student.award%}
                                     {{student.rank}}
                                     {%endif%}</td>
-                                <td align="center">{%if 'G' in student.award%}
+                                <td align="left">{%if 'G' in student.award%}
                                     Gold
                                     {%elif 'M' in student.award%}
                                     Merit
